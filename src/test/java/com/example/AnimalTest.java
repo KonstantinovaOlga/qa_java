@@ -1,4 +1,5 @@
 package com.example;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,7 +7,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class AnimalTest   {
+public class AnimalTest {
 
     private Animal animal;
 
@@ -17,11 +18,11 @@ public class AnimalTest   {
 
     @Test
     public void testGetFamily() {
-        assertEquals("Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи",this.animal.getFamily());
+        assertEquals("Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", this.animal.getFamily());
     }
 
-    @Test (expected=Exception.class)
+    @Test(expected = Exception.class)
     public void testGetFoodException() throws Exception {
-        List<String> actualFoods=animal.getFood("Не определился");
+        List<String> actualFoods = animal.getFood("Не определился");
     }
 }

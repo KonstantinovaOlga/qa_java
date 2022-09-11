@@ -1,4 +1,5 @@
 package com.example;
+
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,9 +26,9 @@ public class FelineTest extends TestCase {
     @Test
     public void testEatMeat() throws Exception {
         Mockito.when(felineSpy.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        List<String> actualFoods=felineSpy.eatMeat();
-        List<String> expectedFoods=List.of("Животные", "Птицы", "Рыба");
-        assertEquals(expectedFoods,actualFoods);
+        List<String> actualFoods = felineSpy.eatMeat();
+        List<String> expectedFoods = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(expectedFoods, actualFoods);
     }
 
     @Test
